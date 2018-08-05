@@ -72,7 +72,9 @@ class Delivery {
   }
 
   customer() {
-
+    return store.customers.find(customer => {
+      return customer.id = this.customerId
+    })
   }
 
   neighborhood() {
