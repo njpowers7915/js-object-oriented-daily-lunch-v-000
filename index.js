@@ -16,6 +16,7 @@ class Meal {
 
 }
 
+let deliveryId = 0
 class Delivery {
 
 }
