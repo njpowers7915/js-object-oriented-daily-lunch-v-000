@@ -12,7 +12,12 @@ class Neighborhood {
 
 let customerId = 0
 class Customer {
-
+  constructor(name, neighborhood) {
+    this.id = ++customerId
+    this.name = name
+    this.neighborhoodId = neighborhood.id
+    store.customers.push(this)
+  }
 }
 
 let mealId = 0
