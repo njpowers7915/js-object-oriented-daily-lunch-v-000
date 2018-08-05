@@ -9,6 +9,13 @@ class Meal {
     this.price = price
     store.meals.push(this)
   }
+
+  deliveries() {
+
+  }
+  customers() {
+
+  }
 }
 
 let neighborhoodId = 0
@@ -17,6 +24,15 @@ class Neighborhood {
     this.id = ++neighborhoodId
     this.name = name
     store.neighborhoods.push(this)
+  }
+
+  deliveries() {
+    return store.deliveries.filter(delivery => {
+      return dilvery.neighborhoodId === this.id
+    })
+  }
+  customers() {
+
   }
 }
 
@@ -27,6 +43,13 @@ class Customer {
     this.name = name
     this.neighborhoodId = neighborhoodId
     store.customers.push(this)
+  }
+
+  deliveries() {
+
+  }
+  customers() {
+
   }
 }
 
@@ -39,4 +62,17 @@ class Delivery {
     this.customerId = customerId
     store.deliveries.push(this)
   }
+
+  meal() {
+
+  }
+
+  customer() {
+
+  }
+
+  neighborhood() {
+
+  }
+
 }
