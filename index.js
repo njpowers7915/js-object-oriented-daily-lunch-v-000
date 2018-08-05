@@ -46,7 +46,7 @@ class Meal {
     })
   }
   customers() {
-    mealCustomers = this.deliveries().map(delivery => {
+    return this.deliveries().map(delivery => {
       return delivery.customer().name;
     })
 
