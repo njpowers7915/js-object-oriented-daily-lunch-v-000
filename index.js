@@ -55,7 +55,7 @@ class Customer {
 
   meals() {
     return this.deliveries().map(delivery => {
-      return delivery.meal() === this.id
+      return delivery.meal()
     })
   }
 }
