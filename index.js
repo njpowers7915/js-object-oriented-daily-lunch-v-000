@@ -1,12 +1,6 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
-
-
-
-
-
-
 let mealId = 0
 class Meal {
   constructor(title, price) {
@@ -16,7 +10,6 @@ class Meal {
     store.meals.push(this)
   }
 }
-
 
 let neighborhoodId = 0
 class Neighborhood {
