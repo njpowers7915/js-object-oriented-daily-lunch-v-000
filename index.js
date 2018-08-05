@@ -89,6 +89,12 @@ class Customer {
   }
 
   meals() {
+    let customerDeliveries = this.deliveries()
+    let customerMeals = []
+    customerDeliveries.forEach(function(delivery) {
+      customerMeals.push(delivery.meal());
+    })
+
     return this.deliveries().map(delivery => {
       return delivery.meal()
     })
