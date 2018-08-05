@@ -94,6 +94,6 @@ class Customer {
     customerDeliveries.forEach(function(delivery) {
       customerMeals.push(delivery.meal());
     })
-    reutn customerMeals;
+    return customerMeals;
   }
 }
