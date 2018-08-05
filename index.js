@@ -49,7 +49,12 @@ class Meal {
     let mealCustomers = this.deliveries().map(delivery => {
       return delivery.customer();
     })
-    return Array.from(new Set(mealCustomers))
+    let uniqueCustomers = []
+    mealCustomers.forEach(function(customer) {
+      if (uniqueCustomers.includes(customer) == false) {
+        uniqueCustomers.push(customer)
+      }
+    })
   }
 }
 
