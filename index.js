@@ -55,6 +55,7 @@ class Meal {
         uniqueCustomers.push(customer)
       }
     })
+    return uniqueCustomers
   }
 }
 
