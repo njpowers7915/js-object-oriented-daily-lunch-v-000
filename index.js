@@ -52,7 +52,7 @@ class Customer {
       return delivery.customerId === this.id
     })
   }
-  customers() {
+  meals() {
 
   }
 }
