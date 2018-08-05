@@ -6,7 +6,7 @@ class Neighborhood {
   constructor(name) {
     this.id = ++neighborhoodId
     this.name = name
-    store.drivers.push(this)
+    store.neighborhoods.push(this)
   }
 }
 
