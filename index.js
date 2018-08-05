@@ -33,7 +33,7 @@ class Neighborhood {
   }
   customers() {
     return this.deliveries().map(delivery => {
-      return trip.customer();
+      return delivery.customer();
     })
   }
 }
