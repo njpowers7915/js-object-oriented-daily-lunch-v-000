@@ -1,6 +1,36 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
+let deliveryId = 0
+class Delivery {
+  constructor(mealId, neighborhoodId, customerId) {
+    this.id = ++deliveryId
+    this.mealId = mealId
+    this.neighborhoodId = neighborhoodId
+    this.customerId = customerId
+    store.deliveries.push(this)
+  }
+
+  meal() {
+    return store.meals.find(meal => {
+      return meal.id = this.mealId
+    })
+  }
+
+  customer() {
+    return store.customers.find(customer => {
+      return customer.id = this.customerId
+    })
+  }
+
+  neighborhood() {
+    return store.neighborhoods.find(neighborhood => {
+      return neighborhood.id = this.neighborhoodId
+    })
+  }
+
+}
+
 let mealId = 0
 class Meal {
   constructor(title, price) {
@@ -62,34 +92,4 @@ class Customer {
       return delivery.meal()
     })
   }
-}
-
-let deliveryId = 0
-class Delivery {
-  constructor(mealId, neighborhoodId, customerId) {
-    this.id = ++deliveryId
-    this.mealId = mealId
-    this.neighborhoodId = neighborhoodId
-    this.customerId = customerId
-    store.deliveries.push(this)
-  }
-
-  meal() {
-    return store.meals.find(meal => {
-      return meal.id = this.mealId
-    })
-  }
-
-  customer() {
-    return store.customers.find(customer => {
-      return customer.id = this.customerId
-    })
-  }
-
-  neighborhood() {
-    return store.neighborhoods.find(neighborhood => {
-      return neighborhood.id = this.neighborhoodId
-    })
-  }
-
 }
