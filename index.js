@@ -1,27 +1,11 @@
 // global datastore
 let store = { neighborhoods: [], meals: [], customers: [], deliveries: [] };
 
-let deliveryId = 0
-class Delivery {
-  constructor(meal, neighborhood, customer) {
-    this.id = ++deliveryId
-    this.mealId = meal.id
-    this.neighborhoodId = neighborhood.id
-    this.customerId = customer.id
-    store.deliveries.push(this) 
-  }
-}
 
 
-let customerId = 0
-class Customer {
-  constructor(name, neighborhood) {
-    this.id = ++customerId
-    this.name = name
-    this.neighborhoodId = neighborhood.id
-    store.customers.push(this)
-  }
-}
+
+
+
 
 let mealId = 0
 class Meal {
@@ -43,4 +27,23 @@ class Neighborhood {
   }
 }
 
+let customerId = 0
+class Customer {
+  constructor(name, neighborhood) {
+    this.id = ++customerId
+    this.name = name
+    this.neighborhoodId = neighborhood.id
+    store.customers.push(this)
+  }
+}
 
+let deliveryId = 0
+class Delivery {
+  constructor(meal, neighborhood, customer) {
+    this.id = ++deliveryId
+    this.mealId = meal.id
+    this.neighborhoodId = neighborhood.id
+    this.customerId = customer.id
+    store.deliveries.push(this)
+  }
+}
