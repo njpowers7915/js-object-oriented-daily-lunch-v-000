@@ -94,9 +94,6 @@ class Customer {
     customerDeliveries.forEach(function(delivery) {
       customerMeals.push(delivery.meal());
     })
-
-    return this.deliveries().map(delivery => {
-      return delivery.meal()
-    })
+    reutn customerMeals;
   }
 }
